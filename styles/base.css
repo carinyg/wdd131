@@ -47,7 +47,7 @@ header a {
 }
 
 header a:hover {
-    color: var(--burnt-sienna);
+    color: var(--indigo-dye);
     border: 1px solid var(--indigo-dye);
 }
 
@@ -56,7 +56,7 @@ header a:hover {
     border-radius: 0.5%;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr 2fr;
+    grid-template-rows: .75fr 2fr .75fr 2fr;
     gap: 10px;
     background-color: var(--vanilla);
 }
@@ -133,8 +133,10 @@ div {
 
 div h1 {
     text-align: center;
-    color: var(--indigo-dye);
+    color: var(--vanilla);
     justify-content: flex-start;
+    border-bottom: 1px solid var(--vanilla);
+    padding: 30px;
 }
 
 div nav {
@@ -149,13 +151,13 @@ a {
     text-align: center;
     margin: 15px;
     text-decoration: none;
-    font-weight: 800;
-    color: var(--indigo-dye);
+    font-weight: 600;
+    color: var(--vanilla);
 }
 
 a:hover {
     color: var(--uranian-blue);
-    border: 1px dotted var(--vanilla);
+    border: 1px dotted var(--uranian-blue);
 }
 
 footer {
