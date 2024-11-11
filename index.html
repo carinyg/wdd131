@@ -1,14 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 | Carin Gardner</title>
+    <meta name="viewport" content="width=device-width">
+    <title>WDD 131 - Dynamic Web Fundamentals - Carin Gardner</title>
+    <meta name="description" content="Home page for Carin Gardner in WDD 131 - Dynamic Web Fundamentals - BYUI">
+    <meta name="author" content="Carin Gardner">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
-<body>
-    <h1>WDD 131 | Carin Gardner</h1>
+<body class="container">
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals - Carin Gardner</h1>
+        <nav>
+            <a href="https://www.linkedin.com/in/carin-gardner-847b9b2b9/">LinkedIn</a>
+            <a href="https://byui.instructure.com/">I-Learn</a>
+            <a
+                href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p28-p34#p28">Scripture</a>
+            <a href="">Final Project</a>
+        </nav>
+    </header>
+    <main>
+        <section class="card1">
+            <h1>About Me</h1>
+            <p class="p1">My name is Carin Gardner. My first name is pronounced Cahr-in, like a "car in" the garage.
+                I was born in Virginia, but I moved to Henderson, Nevada with my husband in 1999.
+                We raised our 5 children here. I have also lived in Hawaii and Utah. I served a
+                mission for the Church of Jesus Christ of Latter-Day Saints in Copenhagen, Denmark.
+                I am currently seeking an online degree through BYUI. I love puzzles of all sorts and can
+                often be found listening to a Brandon Sanderson novel. Cheeseburgers bring me joy.
+            </p>
+            <img src="images/carin-gardner-headshot.jpg" alt="My headshot">
+            <h2>Henderson, Nevada</h2>
+            <p class="p2">Nevada became the 36th state of the United States on October 31, 1864 during
+                the Civil War. That is why it is referred to as the "battle born" state.
+                Henderson is a city in Clark County, southeast of Las Vegas.
+            </p>
+            <figure class="fig1">
+                <img src="images/nevada-flag-state.jpg" alt="Nevada flag within state">
+                <figcaption>Nevada's flag in Nevada's outline</figcaption>
+            </figure>
+            <figure class="fig2">
+                <img src="images/whitney-mesa.jpg" alt="Whitney Mesa">
+                <figcaption>Whitney Mesa, Henderson, Nevada</figcaption>
+            </figure>
+        </section>
+        <div class="card2">
+            <h1>Web Dev Resources</h1>
+            <nav>
+                <a href="https://pixlr.com/">Pixlr</a>
+                <br>
+                <a href="https://app.moqups.com/">Moqups</a>
+                <br>
+                <a href="https://coolors.co/">Coolors</a>
+                <br>
+                <a href="https://pixabay.com/">Pixabay</a>
+                <br>
+                <a href="https://www.pexels.com/">Pexels</a>
+                <br>
+                <a href="https://www.w3schools.com/">W3Schools</a>
+                <br>
+                <a href="https://codepen.io/">Codepen</a>
+                <br>
+                <a href="https://www.smashingmagazine.com/">Smashing Magazine</a>
+            </nav>
+        </div>
+    </main>
+    <footer>
+        <p>
+            ©<span id="currentyear"></span>
+            🍔 Carin Gardner 🍔 Nevada
+        </p>
+        <p>Last Modified: <span id="lastModified"></span>
+        </p>
+    </footer>
 </body>
 
 </html>
