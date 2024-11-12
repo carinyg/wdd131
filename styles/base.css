@@ -35,11 +35,11 @@ header h1 {
 header nav {
     display: flex;
     justify-content: space-around;
-    background-color: var(--air-superiority-blue);
+    background-color: black;
 }
 
 header a {
-    color: whitesmoke;
+    color: var(--vanilla);
     text-decoration: none;
     font-size: x-large;
     font-weight: 600;
@@ -47,8 +47,8 @@ header a {
 }
 
 header a:hover {
-    color: var(--indigo-dye);
-    border: 1px solid var(--indigo-dye);
+    color: var(--burnt-sienna);
+    border: 1px solid var(--burnt-sienna);
 }
 
 .card1 {
@@ -125,7 +125,7 @@ div {
     grid-column: 2/3;
     align-items: center;
     justify-content: flex-start;
-    background-color: var(--burnt-sienna);
+    background-color: var(--indigo-dye);
     display: flex;
     flex-direction: column;
 
@@ -133,9 +133,9 @@ div {
 
 div h1 {
     text-align: center;
-    color: whitesmoke;
+    color: var(--vanilla);
     justify-content: flex-start;
-    border-bottom: 1px solid whitesmoke;
+    border-bottom: 10px solid var(--vanilla);
     padding: 30px;
 }
 
@@ -152,14 +152,14 @@ a {
     margin: 15px;
     text-decoration: none;
     font-weight: 600;
-    color: whitesmoke;
+    color: var(--vanilla);
     padding: 10px;
 
 }
 
 a:hover {
-    color: var(--indigo-dye);
-    border: 1px solid var(--indigo-dye);
+    color: var(--burnt-sienna);
+    border: 1px solid var(--burnt-sienna);
 }
 
 footer {
@@ -168,5 +168,6 @@ footer {
     background-color: var(--indigo-dye);
     color: var(--vanilla);
     text-align: center;
+    border-top: 10px solid black;
 
 }
