@@ -158,8 +158,8 @@ a {
 }
 
 a:hover {
-    color: var(--uranian-blue);
-    border: 1px dotted var(--uranian-blue);
+    color: var(--indigo-dye);
+    border: 1px solid var(--indigo-dye);
 }
 
 footer {
