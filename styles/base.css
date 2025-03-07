@@ -1,0 +1,43 @@
+:root {
+    --indigo-dye: #0c4767;
+    --burnt-sienna: #d7816a;
+    --air-superiority-blue: #7ea0b7;
+    --uranian-blue: #a9cef4;
+    --vanilla: #f2f3ae;
+}
+
+body {
+    font-family: "Montserrat", Arial, sans-serif;
+    background-color: var(--uranian-blue);
+}
+
+header {
+    background-color: var(--indigo-dye);
+}
+
+header h1 {
+    color: var(--vanilla);
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: var(--burnt-sienna);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a {
+    color: var(--vanilla);
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: 600;
+    padding: 15px;
+}
+
+nav a:hover {
+    background-color: var(--air-superiority-blue);
+    color: var(--indigo-dye)
+    border: 1px solid var(--indigo-dye);
+    border-radius: 5px;
+}
