@@ -37,7 +37,7 @@ nav a {
 
 nav a:hover {
     background-color: var(--air-superiority-blue);
-    color: var(--indigo-dye)
+    color: var(--indigo-dye);
     border: 1px solid var(--indigo-dye);
     border-radius: 5px;
 }
