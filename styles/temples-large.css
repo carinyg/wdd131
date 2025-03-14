@@ -1,0 +1,35 @@
+@media screen and (min-width: 600px) {
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        align-items: center;
+    }
+
+    .navigation {
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: x-large;
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    .navagation a {
+        text-align: center;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    main section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 20 px;
+    }
+}
