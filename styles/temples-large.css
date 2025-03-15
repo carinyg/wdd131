@@ -12,26 +12,24 @@
         grid-row: 1/2;
     }
 
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
     #menu {
         display: none;
     }
 
-    .navigation {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+    nav li {
+        display: inline;
     }
 
-    .navigation li {
-        display: flex;
-        flex: 1 1 100%;
+    nav a {
+        display: inline;
     }
-
-    .navigation a {
-        text-align: center;
-    }
-
-
 
     main section {
         display: grid;
