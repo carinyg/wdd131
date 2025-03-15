@@ -20,9 +20,6 @@ header {
 
 #menu {
     display: block;
-}
-
-#menu:active {
     text-decoration: none;
 }
 
@@ -72,6 +69,11 @@ main {
     color: var(--indigo-dye);
     max-width: 800px;
     margin: 0 auto;
+}
+
+main h1 {
+    color: var(--indigo-dye);
+    text-align: center;
 }
 
 main section {

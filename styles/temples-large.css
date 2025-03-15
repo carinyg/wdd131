@@ -3,28 +3,35 @@
     header {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: auto;
+        grid-template-rows: 1fr;
         align-items: center;
     }
 
-    .navigation {
-        flex-direction: row;
-        justify-content: space-around;
-        font-size: x-large;
-    }
-
-    .navigation li {
-        display: block;
-        flex: 1 1 100%;
-    }
-
-    .navagation a {
-        text-align: center;
+    nav {
+        grid-column: 2/3;
+        grid-row: 1/2;
     }
 
     #menu {
         display: none;
     }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .navigation li {
+        display: flex;
+        flex: 1 1 100%;
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+
 
     main section {
         display: grid;
