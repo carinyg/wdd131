@@ -1,0 +1,62 @@
+@media screen and (min-width: 800px) {
+    main {
+        position: relative;
+        width: 100%;
+        padding: 0;
+    }
+    picture {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 0; 
+    }
+
+    picture img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .data-container {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: rgba(255, 255, 255, 0.85);
+        border: 1px solid black;
+        padding: 15px;
+        max-width: fit-content;
+        margin: 0;
+        z-index: 10;
+    }
+
+    .weather-container {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.85);
+        border: 1px solid black;
+        padding: 15px;
+        max-width: fit-content;
+        margin: 0;
+        z-index: 10;
+    }
+
+    .weather-container img {
+        display: none;
+    }
+
+    .weather-container h2::after {
+        content: " 🍃";
+        margin-left: 5px;
+    }
+
+    .data-container h2, .weather-container h2 {
+        position: relative;
+        right: 25px;
+        background-color: rgba(255, 0, 0, 0.85);
+        color: white;
+        padding: 10px;
+        margin: 0;
+    }
+
+}
