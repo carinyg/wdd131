@@ -9,8 +9,63 @@
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css">
     <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <h1>Denmark</h1>
+    </header>
+    <main>
+        <picture>
+            <source srcset="images/danish-street.webp" media="(min-width: 800px)">
+            <img src="images/danish-flag.webp" alt="Danish flag" width="600" height="auto">
+        </picture>
+        <div class="data-container">
+            <h2>Data</h2>
+            <div class="label">Area:</div>
+            <div class="value">43,094 sq km</div>
+            <div class="label">Population:</div>
+            <div class="value">5,982,117</div>
+            <div class="label">Capital:</div>
+            <div class="value">Copenhagen</div>
+            <div class="label">Language:</div>
+            <div class="value">Danish</div>
+            <div class="label">Currency:</div>
+            <div class="value">Danish Krone</div>
+            <div class="label">Time Zone:</div>
+            <div class="value">UTC+01:00 (CET)</div>
+            <div class="label">Calling Code:</div>
+            <div class="value">+45</div>
+            <div class="label">Internet TLD:</div>
+            <div class="value">.dk</div>
+        </div>
+        <div class="Weather-container">
+            <h2>Weather</h2>
+            <div class="label">Temperature:</div>
+            <div class="value">6°C</div>
+            <div class="label">Conditions:</div>
+            <div class="value">Windy</div>
+            <div class="label">Wind:</div>
+            <div class="value">29 km/h</div>
+            <div class="label">Wind Chill:</div>
+            <div class="value"></div>
+        </div>
+
+        </section>
+
+    </main>
+    <footer>
+        <p>
+            ©<span id="currentyear"></span>
+            🍔 Carin Y. Gardner 🍔 Nevada
+        </p>
+        <p>Last Modified: <span id="lastModified"></span>
+        </p>
+    </footer>
 </body>
 </html>
