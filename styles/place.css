@@ -1,12 +1,17 @@
+:root {
+    --primary-color: red;
+    --secondary-color: black;
+}
+
 body {
     font-family: "Montserrat", Arial, sans-serif;
 }
 
 header {
-    background-color: red;
+    background-color: var(--primary-color);
     color: white;
-    text-shadow: 2px 2px 4px black;
-    border-bottom: 3px solid black;
+    text-shadow: 2px 2px 4px var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color);
     text-align: center;
     padding: 15px;
 }
@@ -55,9 +60,9 @@ h2 {
 
 
 footer {
-    background-color: red;
-    color: black;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
-    border-top: 3px solid black;
+    border-top: 3px solid var(--secondary-color);
     padding: 10px;
 }
