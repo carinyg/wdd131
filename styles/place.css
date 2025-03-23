@@ -12,10 +12,15 @@ header {
 }
 
 picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+}
+picture img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .data-container,
