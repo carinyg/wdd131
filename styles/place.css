@@ -5,6 +5,7 @@ body {
 header {
     background-color: red;
     color: white;
+    text-shadow: 2px 2px 4px black;
     border-bottom: 3px solid black;
     text-align: center;
     padding: 15px;
@@ -50,9 +51,8 @@ h2 {
 
 footer {
     background-color: red;
-    color: white;
+    color: black;
     text-align: center;
-    font-weight: bold;
     border-top: 3px solid black;
     padding: 10px;
 }
