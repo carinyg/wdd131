@@ -10,7 +10,7 @@
         top: 20px;
         left: 20px;
         background-color: rgba(255, 255, 255, 0.85);
-        border: 1px solid black;
+        border: 1px solid var(--secondary-color);
         padding: 15px;
         max-width: fit-content;
         margin: 0;
@@ -22,7 +22,7 @@
         bottom: 20px;
         right: 20px;
         background-color: rgba(255, 255, 255, 0.85);
-        border: 1px solid black;
+        border: 1px solid var(--secondary-color);
         padding: 15px;
         max-width: fit-content;
         margin: 0;
@@ -42,8 +42,8 @@
         position: relative;
         right: 25px;
         background-color: rgba(255, 0, 0, 0.85);
-        color: white;
-        text-shadow: 2px 2px 4px black;
+        color: var(--tertiary-color);
+        text-shadow: 2px 2px 4px var(--secondary-color);
         padding: 10px;
         margin: 0;
     }
