@@ -1,0 +1,64 @@
+:root {
+    --header-background-color: black;
+    --header-text-color: white;
+    --subheader-background-color: slategray;
+    --zebra-color: lightgray;
+    --border-color: gray;
+    --shadow-color: hsl(0, 0%, 50%);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    margin: 20px auto;
+    border: thin solid var(--border-color);
+    box-shadow: 0 0 10px var(--shadow-color);
+    border-collapse: collapse;
+    text-align: center;
+    width: 400px;
+}
+
+caption {
+    font-size: 1em;
+    font-weight: normal;
+    padding: 10px;
+    caption-side: bottom;
+    color: var(--header-background-color);
+}
+
+thead {
+    background-color: var(--header-background-color);
+}
+
+thead tr:first-child {
+    color: var(--header-text-color);
+    font-weight: bold;
+    font-size: xx-large;
+    padding: 10px;
+}
+
+thead tr:nth-child(2) {
+    background-color: var(--subheader-background-color);
+    color: var(--header-text-color);
+    font-weight: bold;
+    font-size: x-large;
+    padding: 0.5em 1em;
+}
+
+thead td {
+    background-color: var(--header-background-color);
+}
+
+tbody th,
+tbody td {
+    border: thin solid var(--border-color);
+    padding: 0.5em 1em;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--zebra-color);
+}
