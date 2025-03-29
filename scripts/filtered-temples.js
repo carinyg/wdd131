@@ -151,7 +151,7 @@ oldLink.addEventListener("click", () => {
         const year = parseInt(temple.dedicated.split(",")[0]);
         return year < 1900;
     });
-    
+
     createTempleCard(oldTemples);
 });
 
@@ -164,6 +164,14 @@ newLink.addEventListener("click", () => {
     });
 
     createTempleCard(newTemples);
+});
+
+largeLink.addEventListener("click", () => {
+    resetTitle("Large");
+
+    const largeTemples = temples.filter(temple => temple.area > 90000);
+
+    createTempleCard(largeTemples);
 });
 
 
