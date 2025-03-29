@@ -3,20 +3,17 @@
     header {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr;
         align-items: center;
     }
 
     nav {
         grid-column: 2/3;
-        grid-row: 1/2;
     }
 
     nav ul {
-        display: flex;
         flex-direction: row;
         justify-content: space-around;
-        align-items: center;
+        background-color: transparent;
     }
 
     #menu {
@@ -24,17 +21,17 @@
     }
 
     nav li {
-        display: inline;
+        display: block;
     }
 
     nav a {
-        display: inline;
+        font-size: 1.4rem;
+        padding: 15px;
     }
 
     .temple-album section {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
         padding: 20px;
     }
 }

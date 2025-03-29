@@ -8,31 +8,33 @@
 
 body {
     font-family: "Gabarito", Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: var(--indigo-dye);
 }
 
 header {
     background-color: var(--indigo-dye);
     border-bottom: 10px solid var(--burnt-sienna);
-
+    position: relative;
 }
 
 header h1 {
     color: var(--vanilla);
-    font-size: xx-large;
+    font-size: 2.5rem;
     padding: 20px;
+    text-align: center;
 }
 
 #menu {
     position: absolute;
     top: 20px;
     right: 20px;
-    display: block;
+    font-size: 2rem;
+    color: var(--vanilla);
     text-decoration: none;
 }
 
 #menu::before {
-    color: var(--vanilla);
-    text-decoration: none;
     content: "≡";
 }
 
@@ -40,8 +42,7 @@ nav ul {
     list-style: none;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    background-color: var(--indigo-dye);
 }
 
 nav li {
@@ -50,7 +51,7 @@ nav li {
 
 nav a {
     display: block;
-    font-size: x-large;
+    font-size: 1.5rem;
     color: var(--vanilla);
     padding: 10px;
     text-decoration: none;
@@ -59,7 +60,6 @@ nav a {
 nav a:hover {
     background-color: var(--uranian-blue);
     color: black;
-    padding: 10px;
     border: 3px solid var(--burnt-sienna);
 }
 
@@ -71,21 +71,60 @@ nav a:hover {
     content: "X";
 }
 
-main {
-    background-color: var();
-    color: var(--indigo-dye);
+main.temple-album {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
 main h2 {
     color: var(--indigo-dye);
     text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-main section {
+.temple-album section {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.temple-album section section {
+    background-color: white;
+    border: 3px solid var(--indigo-dye);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.temple-album h3 {
+    font-size: 1.8rem;
+    color: var(--indigo-dye);
+    margin-bottom: 10px;
+}
+
+.temple-album p {
+    font-size: 1.2rem;
+    margin: 8px 0;
+}
+
+.temple-album .label {
+    font-weight: bold;
+    color: var(--burnt-sienna);
+}
+
+.temple-album img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 15px;
+    border: 1px solid var(--air-superiority-blue);
 }
 
 footer {
@@ -94,4 +133,5 @@ footer {
     text-align: center;
     border-top: 10px solid var(--burnt-sienna);
     padding: 10px;
+    margin-top: 20px;
 }

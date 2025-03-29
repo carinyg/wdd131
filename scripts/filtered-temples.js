@@ -95,6 +95,7 @@ const temples = [
 createTempleCard(temples);
 
 function createTempleCard(filteredTemples) {
+    const mainSection = document.querySelector(".temple-album");
     filteredTemples.forEach(temple => {
         let card = document.createElement("section");
         let name = document.createElement("h3");
@@ -112,8 +113,6 @@ function createTempleCard(filteredTemples) {
         img.setAttribute("src", temple.imageUrl);
         img.setAttribute("alt", `${temple.templeName} Temple`);
         img.setAttribute("loading", "lazy");
-        img.setAttribute("width", "400");
-        img.setAttribute("height", "250");
 
         card.appendChild(name);
         card.appendChild(location);
@@ -121,8 +120,8 @@ function createTempleCard(filteredTemples) {
         card.appendChild(area);
         card.appendChild(img);
 
-        document.querySelector(".temple-album").appendChild(card);
-    })
+        mainSection.appendChild(card);
+    });
 }
 
 const homeLink = document.querySelector("#home");
