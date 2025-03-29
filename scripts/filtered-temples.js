@@ -73,7 +73,7 @@ const temples = [
         location: "South Jordan, Utah, United States",
         dedicated: "1981, November, 20",
         area: 148236,
-        imageUrl: "images/jordan-river-utah-temple-sunset.jpg"    
+        imageUrl: "images/jordan-river-utah-temple-sunset.jpg"
     },
     {
         templeName: "Copenhagen Denmark",
@@ -92,22 +92,57 @@ const temples = [
     // Add more temple objects here...
 ];
 
-function displayTemples(templeList) {
-    templeSection.innerHTML = "";
-    templeList.forEach(temple => {
-        const card = document.createElement("div");
-        card.className = "temple-card";
-        card.innerHTML = `
-            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" />
-            <h3>${temple.templeName}</h3>
-            <p>Location: ${temple.location}</p>
-            <p>Dedicated: ${temple.dedicated}</p>
-            <p>Area: ${temple.area} sq ft</p>
-        `;
-        templeSection.appendChild(card);
-    });
+createTempleCard(temples);
+
+function createTempleCard(filteredTemples) {
+    filteredTemples.forEach(temple => {
+        let card = document.createElement("section");
+        let name = document.createElement("h3");
+        let location = document.createElement("p");
+        let dedication = document.createElement("p");
+        let area = document.createElement("p");
+        let img = document.createElement("img");
+
+        name.textContent = temple.templeName;
+        location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+        dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+        area.innerHTML = `<span class="label">Area:</span> ${temple.area} sq ft`;
+        img.setAttribute("src", temple.imageUrl);
+        img.setAttribute("alt", `${temple.templeName} Temple`);
+        img.setAttribute("loading", "lazy");
+        img.setAttribute("width", "400");
+        img.setAttribute("height", "250");
+
+        card.appendChild(name);
+        card.appendChild(location);
+        card.appendChild(dedication);
+        card.appendChild(area);
+        card.appendChild(img);
+
+        document.querySelector(".temple-album").appendChild(card);
+    })
 }
 
-displayTemples(temples);
+const homeLink = document.querySelector("#home");
+const oldLink = document.querySelector("#old");
+const newLink = document.querySelector("#new");
+const largeLink = document.querySelector("#large");
+const smallLink = document.querySelector("#small");
+
+oldLink.addEventListener("click", () => {
+    document.querySelector(".temple-album").innerHTML = ""; //Clear existing Content
+    let title = document.createElement("h2")
+    title.innerHTML = "Older Temples";
+    document.querySelector(".temple-album").appendChild(title);
+
+    const oldTemples = temples.filter(temple => {
+        const year = parseInt(temple.dedicated.split(",")[0]);
+        return year < 1900;
+    });
+    createTempleCard(oldTemples);
+});
+
+
+
 
 
