@@ -29,9 +29,13 @@
         padding: 15px;
     }
 
-    .temple-album section {
+    main.temple-album {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 25px;
         padding: 20px;
+    }
+
+    main h2 {
+        grid-column: 1/-1;
     }
 }

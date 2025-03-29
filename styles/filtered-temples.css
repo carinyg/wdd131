@@ -72,30 +72,28 @@ nav a:hover {
 }
 
 main.temple-album {
-    max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
 }
 
 main h2 {
     color: var(--indigo-dye);
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 20px;
+    grid-column: 1/-1;
+    margin-bottom: 10px;
 }
 
 .temple-album section {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.temple-album section section {
     background-color: white;
-    border: 3px solid var(--indigo-dye);
+    border: 3px solid var(--burnt-sienna);
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,8 +112,9 @@ main h2 {
 }
 
 .temple-album .label {
+    color: var(--indigo-dye);
     font-weight: bold;
-    color: var(--burnt-sienna);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .temple-album img {
@@ -125,6 +124,7 @@ main h2 {
     border-radius: 5px;
     margin-top: 15px;
     border: 1px solid var(--air-superiority-blue);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 footer {
