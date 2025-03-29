@@ -174,6 +174,14 @@ largeLink.addEventListener("click", () => {
     createTempleCard(largeTemples);
 });
 
+smallLink.addEventListener("click", () => {
+    resetTitle("Small");
+
+    const smallTemples = temples.filter(temple => temple.area < 10000);
+
+    createTempleCard(smallTemples);
+});
+
 
 
 
