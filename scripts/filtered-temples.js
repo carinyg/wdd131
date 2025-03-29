@@ -129,8 +129,17 @@ const newLink = document.querySelector("#new");
 const largeLink = document.querySelector("#large");
 const smallLink = document.querySelector("#small");
 
+homeLink.addEventListener("click", () => {
+    document.querySelector(".temple-album").innerHTML = "";
+    let title = document.createElement("h2")
+    title.innerHTML = "Home";
+    document.querySelector(".temple-album").appendChild(title);//Clear existing content
+
+    createTempleCard(temples);
+});
+
 oldLink.addEventListener("click", () => {
-    document.querySelector(".temple-album").innerHTML = ""; //Clear existing Content
+    document.querySelector(".temple-album").innerHTML = ""; //Clear existing content
     let title = document.createElement("h2")
     title.innerHTML = "Older Temples";
     document.querySelector(".temple-album").appendChild(title);
@@ -141,6 +150,8 @@ oldLink.addEventListener("click", () => {
     });
     createTempleCard(oldTemples);
 });
+
+
 
 
 
