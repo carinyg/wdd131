@@ -103,9 +103,11 @@ function createTempleCard(filteredTemples) {
         let area = document.createElement("p");
         let img = document.createElement("img");
 
+        const dedicationParts = temple.dedicated.split(", ");
+
         name.textContent = temple.templeName;
         location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
-        dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+        dedication.innerHTML = `<span class="label">Dedicated:</span> ${dedicationParts[1]} ${dedicationParts[2]}, ${dedicationParts[0]}`;
         area.innerHTML = `<span class="label">Area:</span> ${temple.area} sq ft`;
         img.setAttribute("src", temple.imageUrl);
         img.setAttribute("alt", `${temple.templeName} Temple`);
@@ -129,27 +131,42 @@ const newLink = document.querySelector("#new");
 const largeLink = document.querySelector("#large");
 const smallLink = document.querySelector("#small");
 
+function resetTitle(linkName) {
+    document.querySelector(".temple-album").innerHTML = ""; //Clear existing content
+    let title = document.createElement("h2");
+    title.innerHTML = `${linkName}`;
+    document.querySelector(".temple-album").appendChild(title);
+}
+
 homeLink.addEventListener("click", () => {
-    document.querySelector(".temple-album").innerHTML = "";
-    let title = document.createElement("h2")
-    title.innerHTML = "Home";
-    document.querySelector(".temple-album").appendChild(title);//Clear existing content
+    resetTitle("Home");
 
     createTempleCard(temples);
 });
 
 oldLink.addEventListener("click", () => {
-    document.querySelector(".temple-album").innerHTML = ""; //Clear existing content
-    let title = document.createElement("h2")
-    title.innerHTML = "Older Temples";
-    document.querySelector(".temple-album").appendChild(title);
+    resetTitle("Old");
 
     const oldTemples = temples.filter(temple => {
         const year = parseInt(temple.dedicated.split(",")[0]);
         return year < 1900;
     });
+    
     createTempleCard(oldTemples);
 });
+
+newLink.addEventListener("click", () => {
+    resetTitle("New");
+
+    const newTemples = temples.filter(temple => {
+        const year = parseInt(temple.dedicated.split(",")[0]);
+        return year > 2000;
+    });
+
+    createTempleCard(newTemples);
+});
+
+
 
 
 
