@@ -36,49 +36,36 @@ const form = document.querySelector(".reviewForm");
 const ratingSection = document.querySelector(".rating");
 const errorMessage = document.getElementById("rating-error");
 
-if (!form) {
-    console.log("Form not found");
-} else {
-    console.log("Form found, attaching submit listener");
-    form.addEventListener("submit", function (event) {
-        const ratingSelected = document.querySelector("input[name='rating']:checked");
-        console.log("Submit attempted, rating selected:", ratingSelected);
-
-        if (!ratingSelected) {
-            event.preventDefault();
-            errorMessage.style.display = "block";
-            ratingSection.classList.add("invalid");
-            errorMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
-        } else {
-            errorMessage.style.display = "none";
-            ratingSection.classList.remove("invalid");
-        }
-    });
-}
+form.addEventListener("submit", function (event) {
+    const ratingSelected = document.querySelector("input[name='rating']:checked");
+    if (!ratingSelected) {
+        event.preventDefault();
+        errorMessage.style.display = "block";
+        ratingSection.classList.add("invalid");
+        errorMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    } else {
+        errorMessage.style.display = "none";
+        ratingSection.classList.remove("invalid");
+    }
+});
 
 // Handle rating changes
 const radios = document.querySelectorAll("input[name='rating']");
-if (radios.length > 0) {
-    radios.forEach(radio => {
-        radio.addEventListener("change", function () {
-            errorMessage.style.display = "none";
-            ratingSection.classList.remove("invalid");
-        });
-
-        // Catch invalid state on radio buttons
-        radio.addEventListener("invalid", function (event) {
-            event.preventDefault(); // Stop browser default behavior
-            errorMessage.style.display = "block";
-            ratingSection.classList.add("invalid");
-            errorMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
-        });
+radios.forEach(radio => {
+    radio.addEventListener("change", function () {
+        errorMessage.style.display = "none";
+        ratingSection.classList.remove("invalid");
     });
-} else {
-    console.log("No rating inputs found");
-}
+
+    radio.addEventListener("invalid", function (event) {
+        event.preventDefault();
+        errorMessage.style.display = "block";
+        ratingSection.classList.add("invalid");
+        errorMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+});
 
 // Call the function when the page loads
 window.onload = function () {
-    console.log("Window loaded");
     populateProducts();
 };
