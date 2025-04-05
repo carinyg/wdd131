@@ -38,7 +38,8 @@ form {
 }
 
 .reviewForm label,
-.features, .rating {
+.features,
+.rating {
     display: block;
     margin: 10px 0 7px;
     font-size: 1.3rem;
@@ -51,7 +52,8 @@ form {
 }
 
 .rating input {
-    display: none;
+    position: absolute;
+    left: -9999px;
 }
 
 .rating label {
@@ -68,6 +70,14 @@ form {
 
 .rating label:has(input:checked) {
     color: var(--burnt-sienna);
+}
+
+.error-message {
+    display: none;
+    color: var(--burnt-sienna);
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 5px;
 }
 
 .reviewForm select {
@@ -168,4 +178,15 @@ footer {
 footer p {
     color: var(--vanilla);
     margin: 5px 0;
+}
+
+.rating.invalid {
+    border: 2px solid var(--burnt-sienna);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.rating {
+    border: none;
+    padding: 0;
 }
