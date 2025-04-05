@@ -38,11 +38,36 @@ form {
 }
 
 .reviewForm label,
-.features {
+.features, .rating {
     display: block;
     margin: 10px 0 7px;
     font-size: 1.3rem;
     color: var(--indigo-dye);
+}
+
+.reviewForm input[type="radio"] {
+    font-size: 2rem;
+    color: var(--burnt-sienna);
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    color: var(--indigo-dye);
+    cursor: pointer;
+}
+
+.rating label:hover {
+    color: var(--uranian-blue);
+}
+
+.rating label:has(input:checked) {
+    color: var(--burnt-sienna);
 }
 
 .reviewForm select {
@@ -69,44 +94,6 @@ form {
     appearance: none;
 }
 
-.fiveStars {
-    display: flex;
-    width: 160px;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    position: relative;
-}
-
-.fiveStars input {
-    display: none;
-}
-
-.fiveStars label {
-    width: 30px;
-    height: 30px;
-    font-size: 30px;
-    color: var(--uranian-blue);
-}
-
-.fiveStars label:hover {
-    color: var(--air-superiority-blue);
-}
-
-.fiveStars label:active::before {
-    transform: scale(1.1);
-}
-
-.fiveStars label::before {
-    content: "★";
-    position: absolute;
-    top: 0px;
-    line-height: 26px;
-}
-
-.fiveStars input:checked~label:before {
-    content: "★";
-    color: var(--burnt-sienna);
-}
 
 .features span {
     font-size: 1rem;

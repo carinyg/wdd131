@@ -28,27 +28,23 @@
                     <option value="" disabled selected>Select a Product ...</option>
                 </select>
             </label>
-            <label>Overall Rating
-                <section class="fiveStars">
-                    <input type="radio" id="star5" name="rating" value="5" required>
-                    <label for="star5"></label>
-                    <input type="radio" id="star4" name="rating" value="4" required>
-                    <label for="star4"></label>
-                    <input type="radio" id="star3" name="rating" value="3" required>
-                    <label for="star3"></label>
-                    <input type="radio" id="star2" name="rating" value="2" required>
-                    <label for="star2"></label>
-                    <input type="radio" id="star1" name="rating" value="1" required>
-                    <label for="star1"></label>
-                </section>
-            </label>
+            <br>
+            <div class="rating">Overall Rating
+            <label><input type="radio" name="rating" id="star5" value="5" required> ★★★★★</label>
+            <label><input type="radio" name="rating" id="star4" value="4"> ★★★★☆</label>
+            <label><input type="radio" name="rating" id="star3" value="3"> ★★★☆☆</label>
+            <label><input type="radio" name="rating" id="star2" value="2"> ★★☆☆☆</label>
+            <label><input type="radio" name="rating" id="star1" value="1"> ★☆☆☆☆</label>
+            </div>
+            <br>
             <label>Date of Installation<input type="date" id="installation" name="installDate" required></label>
-            <div class="features">Which product features did you find most useful?<br><span>(Check all that
-                    apply)</span></div>
-            <label><input type="checkbox" id="feature" name="design" value="useful"> Design</label>
-            <label><input type="checkbox" id="feature" name="durability" value="useful"> Durability</label>
-            <label><input type="checkbox" id="feature" name="ease" value="useful"> Ease of Use</label>
-            <label><input type="checkbox" id="feature" name="performance" value="useful"> Performance</label>
+            <br>
+            <div class="features">Which product features did you find most useful?<br><span>(Check all that apply)</span></div>
+            <label><input type="checkbox" id="featureDesign" name="design" value="useful"> Design</label>
+            <label><input type="checkbox" id="featureDurability" name="durability" value="useful"> Durability</label>
+            <label><input type="checkbox" id="featureEase" name="ease" value="useful"> Ease of Use</label>
+            <label><input type="checkbox" id="featurePerformance" name="performance" value="useful"> Performance</label>
+            <br>
             <label>Written Review <span>(Optional)</span><textarea id="comments" name="comments"></textarea></label>
             <label>Your Name <span>(Optional)</span><input type="text" id="username" name="username"></label>
             <input type="submit" value="Add My Review">
