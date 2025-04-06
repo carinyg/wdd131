@@ -58,6 +58,11 @@ main img {
     font-family: var(--primary-font);
 }
 
+figure img {
+    width: auto;
+    height: auto;
+}
+
 
 
 h3,
