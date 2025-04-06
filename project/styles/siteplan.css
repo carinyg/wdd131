@@ -60,7 +60,8 @@ main img {
 
 
 
-h3, .chilanka {
+h3,
+.chilanka {
     font-family: var(--secondary-font);
 }
 
