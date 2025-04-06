@@ -40,6 +40,11 @@ main img {
     width: 50%;
 }
 
+.logo {
+    width: 75px;
+    height: auto;
+}
+
 .wireframes {
     display: grid;
     grid-template-columns: 1fr 2fr;
