@@ -1,15 +1,20 @@
 @media screen and (min-width: 800px) {
 
     header {
-        display: grid;
-        grid-template-columns: 1fr 2fr 3fr;
+        grid-template-columns: 1fr 2fr 4fr;
         grid-template-rows: 1fr;
         align-items: center;
+        justify-items: center;
+        padding: 20px;
     }
 
     nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         grid-column: 3/4;
         grid-row: 1/2;
+        font-size: 2rem;
     }
 
     header h1 {
@@ -44,7 +49,7 @@
     nav a {
         display: inline;
     }
-    
+
     main.product-info {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 25px;
