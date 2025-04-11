@@ -75,6 +75,57 @@ nav a:hover {
     content: "X";
 }
 
+body {
+    background-color: var(--dun);
+}
+
+main.product-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 20px auto;
+    padding: 0 20px;
+    max-width: 1600px;
+}
+
+main h2 {
+    color: var(--delft-blue);
+    text-align: center;
+    font-size: 2rem;
+    grid-column: 1/-1;
+    margin-bottom: 10px;
+}
+
+.product-info section {
+    background-color: white;
+    border: 3px solid var(--chamoisee);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 1.8rem;
+    color: var(--delft-blue);
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 1.2rem;
+    margin: 8px 0;
+    color: var(--delft-blue);
+}
+
+.product-info .label {
+    color: var(--alloy-orange);
+    font-weight: bold;
+    text-shadow: 0 1px 2px var(--russet);
+}
+
 .hero {
     width: 100%;
     height: auto;

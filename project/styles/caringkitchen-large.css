@@ -44,11 +44,14 @@
     nav a {
         display: inline;
     }
-
-    main section {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
+    
+    main.product-info {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
         padding: 20px;
+    }
+
+    main h2 {
+        grid-column: 1/-1;
     }
 }
