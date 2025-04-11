@@ -9,3 +9,79 @@ hambutton.addEventListener('click', () => {
     mainnav.classList.toggle('show');
     hambutton.classList.toggle('show');
 });
+
+const products = [
+    {
+        productName: "Bread Bowls",
+        price: "$7.50 for 4 large or 6 small",
+        ingredients: "All-Purpose Flour, Whole Milk, Water, Butter, Sugar, Yeast, Egg, Vital Wheat Gluten, Salt",
+    },
+    {
+        productName: "Cinnamon Rolls",
+        price: "$10 for 6",
+        ingredients: "All-Purpose Flour, Whole Milk, Water, Sugar, Butter, Eggs, Yeast, Brown Sugar, Cinnamon, Vital Wheat Gluten, Salt, Cream Cheese Frosting",
+
+    },
+    {
+        productName: "Dinner Rolls",
+        price: "$7.50 for 12, $4 for 6",
+        ingredients: "All-Purpose Flour, Whole Milk, Water, Butter, Sugar, Yeast, Egg, Vital Wheat Gluten, Salt",
+    },
+    {
+        productName: "Mixed Wheat Bread",
+        price: "$6.50 for 1 sliced loaf",
+        ingredients: "Water, Whole Wheat Flour, All-Purpose Flour, Honey, Coconut Oil, Vital Wheat Gluten, Lemon Juice, Yeast, Salt",
+    },
+    {
+        productName: "Sesame Sourdough Hamburger Buns",
+        price: "$6.50 for 8, $3.50 for 4",
+        ingredients: "Unbleached Organic All-Purpose Flour, Sourdough Starter, Whole Milk, Water, Sugar, Olive Oil, Egg, Yeast, Egg, Vital Wheat Gluten, Salt, Sesame Seeds",
+    },
+    {
+        productName: "Sourdough Baguette",
+        price: "$6 for 1 baguette",
+        ingredients: "Unbleached Organic All-Purpose Flour, Water, Sourdough Starter, Vital Wheat Gluten, Salt, Instant Yeast",
+    },
+    {
+        productName: "Sourdough Hot Dog Buns",
+        price: "$6.50 for 10, $3.50 for 5",
+        ingredients: "Unbleached Organic All-Purpose Flour, Sourdough Starter, Whole Milk, Water, Sugar, Olive Oil, Egg, Yeast, Egg, Vital Wheat Gluten, Salt",
+    },
+    {
+        productName: "Sourdough Sandwich Bread",
+        price: "$6.50 for 1 sliced loaf",
+        ingredients: "Unbleached Organic All-Purpose Flour, Water, Sourdough Starter, Butter, Whole Milk, Sugar, Yeast, Vital Wheat Gluten, Salt",
+    },
+    {
+        productName: "White Bread",
+        price: "$6 for 1 sliced loaf",
+        ingredients: "All-Purpose Flour, Whole Milk, Water, Butter, Sugar, Egg, Yeast, Salt, Vital Wheat Gluten",
+    },
+    {
+        productName: "Whole Wheat Bread",
+        price: "$7 for 1 sliced loaf",
+        ingredients: "Whole Wheat Flour, Water, Honey, Coconut Oil, Vital Wheat Gluten, Lemon Juice, Yeast, Salt",
+    },
+];
+
+createProductCard(products);
+
+function createProductCard(products) {
+    const mainSection = document.querySelector(".product-info");
+    products.forEach(product => {
+        let card = document.createElement("section");
+        let name = document.createElement("h3");
+        let price = document.createElement("p");
+        let ingredients = document.createElement("p");
+
+        name.textContent = product.productName;
+        price.innerHTML = `<span class="label">Price:</span> ${product.price}`;
+        ingredients.innerHTML = `<span class="label">Ingredients:</span> ${product.ingredients}`;
+
+        card.appendChild(name);
+        card.appendChild(price);
+        card.appendChild(ingredients);
+
+        mainSection.appendChild(card);
+    });
+}
