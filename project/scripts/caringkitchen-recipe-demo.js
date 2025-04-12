@@ -1,14 +1,14 @@
-document.getElementById("lastModified").textContent = document.lastModified;
+function updateFooter() {
+    document.getElementById("lastModified").textContent = document.lastModified;
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+};
 
-document.getElementById("currentyear").textContent = new Date().getFullYear();
-
-const mainnav = document.querySelector('.navigation');
-const hambutton = document.querySelector('#menu');
-
-hambutton.addEventListener('click', () => {
+function toggleMenu() {
+    const mainnav = document.querySelector('.navigation');
+    const hambutton = document.querySelector('#menu');
     mainnav.classList.toggle('show');
     hambutton.classList.toggle('show');
-});
+};
 
 const recipeSteps = [
     {
@@ -92,3 +92,91 @@ const recipeSteps = [
         description: "Allow the bread to cool for at least 2 hours before slicing. The bread will stay fresh longer if it is sliced as needed, keeping the heel as a cover for the sliced end."
     }
 ];
+
+
+function createStepCard(recipeSteps) {
+    const mainSection = document.querySelector(".recipe-demo");
+    recipeSteps.forEach(recipeStep => {
+        let step = document.createElement("section");
+        let title = document.createElement("h3");
+        let img = document.createElement("img");
+        let description = document.createElement("p");
+
+        title.textContent = recipeStep.title;
+        img.setAttribute("src", recipeStep.image);
+        img.setAttribute("alt", `${recipeStep.title} image`);
+        img.setAttribute("loading", "lazy");
+        img.setAttribute("width", "250");
+        img.setAttribute("height", "250");
+        description.textContent = recipeStep.description;
+
+        step.appendChild(title);
+        step.appendChild(img);
+        step.appendChild(description);
+
+        mainSection.appendChild(step);
+    });
+};
+
+function handleContactForm() {
+    const contactButton = document.getElementById('contact-button');
+    const modal = document.getElementById('contactModal');
+    const closeModal = document.getElementById('closeModal');
+    const contactForm = document.getElementById('contact-form');
+
+    if (contactButton && modal && closeModal && contactForm) {
+        contactButton.addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        contactForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const formData = { name, email, message, timestamp: new Date().toISOString() };
+            let submissions = JSON.parse(localStorage.getItem('contactSubmissions')) || [];
+            submissions.push(formData);
+            localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+
+            const subject = encodeURIComponent(`Inquiry from Caring Kitchen - ${name}`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+            window.location.href = `mailto:cariny.gardner@gmail.com?subject=${subject}&body=${body}`;
+
+            contactForm.reset();
+            modal.style.display = 'none';
+        });
+    }
+};
+
+function updateVisitCount() {
+    const pageName = window.location.pathname.split('/').pop() || 'caringkitchen.html';
+    let visits = parseInt(localStorage.getItem(`visits_${pageName}`) || '0');
+    visits += 1;
+    localStorage.setItem(`visits_${pageName}`, visits);
+    const visitCountElement = document.getElementById('visitCount');
+    if (visitCountElement) {
+        visitCountElement.textContent = visits;
+    }
+};
+
+function init() {
+    updateFooter();
+    toggleMenu();
+    handleContactForm();
+    createStepCard(recipeSteps);
+    updateVisitCount();
+};
+
+document.addEventListener('DOMContentLoaded', init);

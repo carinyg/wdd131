@@ -11,7 +11,7 @@
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles/caringkitchen.css">
     <link rel="stylesheet" href="styles/caringkitchen-large.css" media="(min-width: 800px)">
-    <script src="scripts/caringkitchen.js" defer></script>
+    <script src="scripts/caringkitchen-recipe-demo.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
@@ -34,12 +34,32 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="recipe-demo">
+        <h2>Recipe Demonstration</h2>
+        <p>The following demonstration is the bread-making method I have developed over the years. This method works
+            with most yeast bread recipes. It is the method I use for all of the products I make.</p>
 
     </main>
     <footer>
         <p>©<span id="currentyear"></span> 🍔 Carin Y. Gardner 🍔 Nevada</p>
         <p>Last Modified: <span id="lastModified"></span></p>
+        <p>Page Visits: <span id="visitCount">0</span></p>
+        <button id="contactButton">Want to know more?</button>
+        <!-- Modal for the contact form -->
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                <h3>Contact Caring Kitchen</h3>
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Comments of Questions:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send Email</button>
+                </form>
+            </div>
     </footer>
 
 </body>

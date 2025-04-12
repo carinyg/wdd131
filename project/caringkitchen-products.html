@@ -40,6 +40,23 @@
     <footer>
         <p>©<span id="currentyear"></span> 🍔 Carin Y. Gardner 🍔 Nevada</p>
         <p>Last Modified: <span id="lastModified"></span></p>
+        <p>Page Visits: <span id="visitCount">0</span></p>
+        <button id="contactButton">Want to know more?</button>
+        <!-- Modal for the contact form -->
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                <h3>Contact Caring Kitchen</h3>
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Comments of Questions:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send Email</button>
+                </form>
+            </div>
     </footer>
 
 </body>
