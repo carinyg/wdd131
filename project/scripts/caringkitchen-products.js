@@ -71,7 +71,7 @@ const products = [
         image: "images/whole-wheat.jpg",
         price: "$7 for 1 sliced loaf",
         ingredients: "Whole Wheat Flour, Water, Honey, Coconut Oil, Vital Wheat Gluten, Lemon Juice, Yeast, Salt",
-    },
+    }
 ];
 
 createProductCard(products);
