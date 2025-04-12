@@ -80,7 +80,7 @@ function createProductCard(products) {
     const mainSection = document.querySelector(".product-info");
     products.forEach(product => {
         if (product.image == "") {
-            product.image = "images/caring-kitchen-logo-small.png";
+            product.image = "images/photo-coming-soon.png";
         };
         let card = document.createElement("section");
         let name = document.createElement("h3");
