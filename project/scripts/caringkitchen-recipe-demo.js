@@ -24,7 +24,7 @@ const recipeSteps = [
     {
         title: "Add Yeast",
         image: "images/stir-in-yeast.jpg",
-        description: "Drain the hot water from the stand mixer bowl. Add the liquid ingredients to the bowl and sprinkle the yeast on top. Using your heated spoon, gently stir to combine. All the yeast shoot be wet with no large clumps."
+        description: "Drain the hot water from the stand mixer bowl. Add the liquid ingredients to the bowl and sprinkle the yeast on top. Using your heated spoon, gently stir to combine. All the yeast should be wet with no large clumps."
     },
     {
         title: "Sponge",
@@ -39,7 +39,7 @@ const recipeSteps = [
     {
         title: "Mix",
         image: "images/add-white-flour.jpg",
-        description: "Put the bowl on the stand mixer and work your way up to speed 2. Mix for 4 minutes. The dough should feel sticky but not sticky enough that it leaves residue. If it is too wet, add a little more flour. If it is too dry, add a little more water. When the consitency is right, mix for an additional 4 minutes."
+        description: "Put the bowl on the stand mixer and work your way up to speed 2. Mix for 4 minutes. The dough should feel sticky but not sticky enough that it leaves residue. If it is too wet, add a little more flour. If it is too dry, add a little more water. When the consistency is right, mix for an additional 4 minutes."
     },
     {
         title: "First Rise",
@@ -54,12 +54,12 @@ const recipeSteps = [
     {
         title: "Shape, part 1",
         image: "images/shape-to-rounds.jpg",
-        description: "Knead the dough and work it into a ball. If the dough ever starts to tear, stop immediatley and let it rest 2-10 minutes."
+        description: "Knead the dough and work it into a ball. If the dough ever starts to tear, stop immediately and let it rest 2-10 minutes."
     },
     {
         title: "Shape, part 2",
         image: "images/shape-to-loaf.jpg",
-        description: "After letting the balls rest a few minutes, shape into a loaf. Rock the ball back and forth until it is a cylinder the length of your bread pan. Roll the endback on itself until it is halfway under and rock back and forth until smooth with no visible creases. Rotate the loaf 180° and repeat with the other end. If the dough ever starts to tear, stop immediatley and let it rest 2-10 minutes."
+        description: "After letting the balls rest a few minutes, shape into a loaf. Rock the ball back and forth until it is a cylinder the length of your bread pan. Roll the endback on itself until it is halfway under and rock back and forth until smooth with no visible creases. Rotate the loaf 180° and repeat with the other end. If the dough ever starts to tear, stop immediately and let it rest 2-10 minutes."
     },
     {
         title: "Scoring",
@@ -84,7 +84,7 @@ const recipeSteps = [
     {
         title: "Cooling",
         image: "images/baked-loaf.jpg",
-        description: "The bread should be a deep golden color. When it is finished removed the loaves from the pans immediately and place on cooling racks."
+        description: "The bread should be a deep golden color. When it is finished, remove the loaves from the pans immediately and place on cooling racks."
     },
     {
         title: "Slicing",
@@ -119,10 +119,10 @@ function createStepCard(recipeSteps) {
 };
 
 function handleContactForm() {
-    const contactButton = document.getElementById('contact-button');
+    const contactButton = document.getElementById('contactButton');
     const modal = document.getElementById('contactModal');
     const closeModal = document.getElementById('closeModal');
-    const contactForm = document.getElementById('contact-form');
+    const contactForm = document.getElementById('contactForm');
 
     if (contactButton && modal && closeModal && contactForm) {
         contactButton.addEventListener('click', () => {
@@ -173,7 +173,10 @@ function updateVisitCount() {
 
 function init() {
     updateFooter();
-    toggleMenu();
+    const hambutton = document.querySelector('#menu');
+    if (hambutton) {
+        hambutton.addEventListener('click', toggleMenu);
+    }
     handleContactForm();
     createStepCard(recipeSteps);
     updateVisitCount();

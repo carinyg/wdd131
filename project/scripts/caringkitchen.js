@@ -11,10 +11,10 @@ function toggleMenu() {
 };
 
 function handleContactForm() {
-    const contactButton = document.getElementById('contact-button');
+    const contactButton = document.getElementById('contactButton');
     const modal = document.getElementById('contactModal');
     const closeModal = document.getElementById('closeModal');
-    const contactForm = document.getElementById('contact-form');
+    const contactForm = document.getElementById('contactForm');
 
     if (contactButton && modal && closeModal && contactForm) {
         contactButton.addEventListener('click', () => {
@@ -63,11 +63,33 @@ function updateVisitCount() {
     }
 };
 
+function displayGreeting() {
+    const hour = new Date().getHours();
+    let greeting;
+    if (hour < 12) {
+        greeting = `Good morning! Thanks for visiting Caring Kitchen!`;
+    } else if (hour < 18) {
+        greeting = `Good afternoon! Thanks for visiting Caring Kitchen!`;
+    } else {
+        greeting = `Good evening! Thanks for visiting Caring Kitchen!`;
+    }
+
+    const greetingElement = document.createElement('p');
+    greetingElement.textContent = greeting;
+    greetingElement.style.color = 'var(--delft-blue)';
+    greetingElement.style.textAlign = 'center';
+    document.querySelector('.bio').prepend(greetingElement);
+};
+
 function init() {
     updateFooter();
-    toggleMenu();
+    const hambutton = document.querySelector('#menu');
+    if (hambutton) {
+        hambutton.addEventListener('click', toggleMenu);
+    }
     handleContactForm();
     updateVisitCount();
+    displayGreeting();
 }
 
 document.addEventListener('DOMContentLoaded', init);

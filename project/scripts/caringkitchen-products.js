@@ -105,10 +105,10 @@ function createProductCard(products) {
 }
 
 function handleContactForm() {
-    const contactButton = document.getElementById('contact-button');
+    const contactButton = document.getElementById('contactButton');
     const modal = document.getElementById('contactModal');
     const closeModal = document.getElementById('closeModal');
-    const contactForm = document.getElementById('contact-form');
+    const contactForm = document.getElementById('contactForm');
 
     if (contactButton && modal && closeModal && contactForm) {
         contactButton.addEventListener('click', () => {
@@ -159,7 +159,10 @@ function updateVisitCount() {
 
 function init() {
     updateFooter();
-    toggleMenu();
+    const hambutton = document.querySelector('#menu');
+    if (hambutton) {
+        hambutton.addEventListener('click', toggleMenu);
+    }
     createProductCard(products);
     handleContactForm();
     updateVisitCount();

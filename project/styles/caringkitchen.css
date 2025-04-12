@@ -222,6 +222,13 @@ footer button:hover {
     background-color: var(--russet);
 }
 
+footer button:focus,
+.close:focus {
+    outline: 2px solid var(--alloy-orange);
+    outline-offset: 2px;
+    box-shadow: 0 0 5px var(--alloy-orange), 0 0 10px var(--alloy-orange);
+}
+
 .modal {
     display: none;
     position: fixed;
