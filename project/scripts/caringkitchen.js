@@ -76,6 +76,7 @@ function displayGreeting() {
 
     const greetingElement = document.createElement('p');
     greetingElement.textContent = greeting;
+    greetingElement.classList.add('greeting');
     greetingElement.style.color = 'var(--delft-blue)';
     greetingElement.style.textAlign = 'center';
     document.querySelector('.bio').prepend(greetingElement);
