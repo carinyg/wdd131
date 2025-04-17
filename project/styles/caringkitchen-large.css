@@ -52,7 +52,7 @@
 
     .bio {
         display: grid;
-        grid-template-columns: 1 fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto auto;
         gap: 20px;
         max-width: 1600px;
